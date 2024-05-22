@@ -5,10 +5,14 @@ import React from 'react'
 import "./style.scss";
 
 export default function Library() {
-  return (
-	<div>
-		<h1>Settings</h1>
-	   <Button>Click me</Button>
-	</div>
-  )
+	return (
+		<>
+			<div className="main-settings-banner">
+				<h1>Settings</h1>
+			</div>
+			<div className="main-settings">
+				Tbd...
+			</div>
+		</>
+	)
 }

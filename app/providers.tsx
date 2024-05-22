@@ -8,7 +8,7 @@ export default function Providers({ children }: { children: ReactNode }) {
 	return (
 		<Theme theme="g100">
 			<Header />
-			<Content style={{height: "99vh"}}>{children}</Content>
+			<Content style={{height: "99vh", padding: 0}}>{children}</Content>
 		</Theme>
 	);
 }
