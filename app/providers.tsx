@@ -6,7 +6,7 @@ import Header from "./header/page";
 
 export default function Providers({ children }: { children: ReactNode }) {
 	return (
-		<Theme theme="g10">
+		<Theme theme="g100">
 			<Header />
 			<Content>{children}</Content>
 		</Theme>

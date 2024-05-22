@@ -15,6 +15,7 @@ import {
 	HeaderSideNavItems,
 } from '@carbon/react';
 import { Switcher, Notification, UserAvatar } from '@carbon/icons-react';
+import Link from 'next/link';
 import './style.scss';
 
 const TutorialHeader = () => (
@@ -31,8 +32,12 @@ const TutorialHeader = () => (
 					Library
 				</HeaderName>
 				<HeaderNavigation aria-label="Carbon Tutorial">
-					<HeaderMenuItem href="/library">Library</HeaderMenuItem>
-					<HeaderMenuItem href="/settings">Settings</HeaderMenuItem>
+					<Link href="/library" passHref legacyBehavior>
+						<HeaderMenuItem >Library</HeaderMenuItem>
+					</Link>
+					<Link href="/settings" passHref legacyBehavior>
+						<HeaderMenuItem>Settings</HeaderMenuItem>
+					</Link>
 				</HeaderNavigation>
 				<SideNav
 					aria-label="Side navigation"
@@ -65,7 +70,7 @@ const TutorialHeader = () => (
 						<Switcher size={20} />
 					</HeaderGlobalAction> */}
 				</HeaderGlobalBar>
-			</Header>
+			</Header >
 		)}
 	/>
 );
