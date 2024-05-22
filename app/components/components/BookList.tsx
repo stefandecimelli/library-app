@@ -3,6 +3,7 @@
 import { Book } from '@prisma/client';
 import { Table, TableHead, TableRow, TableHeader, TableBody, TableCell, Button } from '@carbon/react';
 import { useRouter } from "next/navigation";
+import Image from "next/image"
 
 const BookList = ({ books, deleteBook }: { books: Book[], deleteBook: Function }) => {
 	const router = useRouter();
@@ -25,7 +26,9 @@ const BookList = ({ books, deleteBook }: { books: Book[], deleteBook: Function }
 				<TableBody>
 					{books?.map((book) => (
 						<TableRow key={book.id}>
-							<TableCell>{book.cover_url}</TableCell>
+							<TableCell>
+								<img alt={"(cover not found)"} src={book.cover_url} height={200} />
+							</TableCell>
 							<TableCell>{book.name}</TableCell>
 							<TableCell>{book.author}</TableCell>
 							<TableCell>
