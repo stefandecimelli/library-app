@@ -59,16 +59,17 @@ const TutorialHeader = () => (
 					>
 						<Notification size={20} />
 					</HeaderGlobalAction> */}
-					<HeaderGlobalAction
-						aria-label="User Avatar"
-						tooltipAlignment="center"
-						className="action-icons"
-					>
-						<UserAvatar size={20} />
-					</HeaderGlobalAction>
-					{/* <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
+					<Link href="/settings" passHref legacyBehavior>
+						<HeaderGlobalAction
+							aria-label="Profile"
+							className="action-icons"
+						>
+							<UserAvatar size={20} />
+						</HeaderGlobalAction>
+					</Link>
+					<HeaderGlobalAction aria-label="More" tooltipAlignment="center">
 						<Switcher size={20} />
-					</HeaderGlobalAction> */}
+					</HeaderGlobalAction>
 				</HeaderGlobalBar>
 			</Header >
 		)}
