@@ -16,7 +16,7 @@ import {
 } from '@carbon/react';
 import { Switcher, Notification, UserAvatar } from '@carbon/icons-react';
 import Link from 'next/link';
-import './style.scss';
+import './Header.scss';
 
 const TutorialHeader = () => (
 	<HeaderContainer

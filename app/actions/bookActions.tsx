@@ -14,3 +14,11 @@ export async function createBook(args: Book) {
 		data: args
 	});
 }
+
+export async function deleteBook(id: number) {
+	await database.book.delete({
+		where: {
+			id
+		}
+	});
+}

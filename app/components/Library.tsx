@@ -2,13 +2,13 @@
 
 import { Button } from '@carbon/react';
 import React, { useState } from 'react'
-import "./style.scss";
+import "./Llibrary.scss";
 import BookList from './components/BookList';
 import BookListContainer from './components/BookListContainer';
 import { Book } from '@prisma/client';
 import NewBookModel from './components/NewBookModel';
 
-export default function Library({books, createBook}: {books: Book[], createBook: Function}) {
+export default function Library({books, createBook, deleteBook}: {books: Book[], createBook: Function, deleteBook: Function}) {
 	const [showNewBookModel, setShowNewBookModel] = useState(false)
 	return (
 		<>
@@ -21,7 +21,7 @@ export default function Library({books, createBook}: {books: Book[], createBook:
 				</div>
 			</div>
 			<BookListContainer>
-				<BookList books={books} />
+				<BookList books={books} deleteBook={deleteBook}/>
 			</BookListContainer>
 			<NewBookModel createBook={createBook} open={showNewBookModel} close={() => setShowNewBookModel(false)} />
 		</>

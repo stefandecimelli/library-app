@@ -1,7 +1,7 @@
 'use client'
 import React, { ReactNode } from "react";
 import { Content, Theme } from '@carbon/react';
-import Header from "./header/page";
+import Header from "./components/Header";
 
 export default function Providers({ children }: { children: ReactNode }) {
 	return (
