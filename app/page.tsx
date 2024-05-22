@@ -1,10 +1,9 @@
-'use client';
-import Library from "./library/page";
+'use server'
 
-export default function Home() {
-  return (
-    <main>
-       <Library />
-    </main>
-  );
+import {getBooks, createBook} from "./actions/bookActions";
+import Library from "./components/page";
+
+export default async function Home() {
+  const books = await getBooks();
+  return <Library books={books} createBook={createBook} />;
 }

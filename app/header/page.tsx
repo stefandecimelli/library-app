@@ -32,7 +32,7 @@ const TutorialHeader = () => (
 					Library
 				</HeaderName>
 				<HeaderNavigation aria-label="Carbon Tutorial">
-					<Link href="/library" passHref legacyBehavior>
+					<Link href="/" passHref legacyBehavior>
 						<HeaderMenuItem >Library</HeaderMenuItem>
 					</Link>
 					<Link href="/settings" passHref legacyBehavior>
@@ -46,8 +46,12 @@ const TutorialHeader = () => (
 				>
 					<SideNavItems>
 						<HeaderSideNavItems>
-							<HeaderMenuItem href="/library">Library</HeaderMenuItem>
-							<HeaderMenuItem href="/settings">Settings</HeaderMenuItem>
+							<Link href="/" passHref legacyBehavior>
+								<HeaderMenuItem >Library</HeaderMenuItem>
+							</Link>
+							<Link href="/settings" passHref legacyBehavior>
+								<HeaderMenuItem>Settings</HeaderMenuItem>
+							</Link>
 						</HeaderSideNavItems>
 					</SideNavItems>
 				</SideNav>

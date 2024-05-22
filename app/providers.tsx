@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 import React, { ReactNode } from "react";
 import { Content, Theme } from '@carbon/react';
 import Header from "./header/page";
