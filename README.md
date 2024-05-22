@@ -8,3 +8,5 @@ First, run the development server:
 ```bash
 npm run dev
 ```
+
+When you land on the page, you can add a book by adding it's name, author, and a link to the remote image (search for an image in google, right click, then press "copy image address")
